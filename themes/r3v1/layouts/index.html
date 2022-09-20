@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+{{ partial "header.html" . }}
+
+<div class="columns is-centered mt-6 mx-2">
+  <div class="column is-two-thirds">
+
+    <!-- start: title and social icons -->
+    <div class="columns is-vcentered">
+      <div class="column is-9">
+        <h4 class="title is-4"> {{ .Title }} </h4>
+      </div>
+      <div class="column">
+        <i class="fa-brands fa-github pl-4"></i> aixnr/cdr3
+        <i class="fa-brands fa-twitter pl-4"></i> @aixnr 
+      </div>
+    </div>
+    <!-- end: title and social icons -->
+
+    <!-- start: nav below title -->
+    <div>
+      <a href='{{ ref . "/about.md" }}'>
+        <button class="button is-link is-small">About</button>
+      </a>
+      <a href='{{ ref . "/protocol/bcr.md" }}'>
+        <button class="button is-link is-small">BCR</button>
+      </a>
+      <a href='{{ ref . "/protocol/scb.md" }}'>
+        <button class="button is-link is-small">SCB</button>
+      </a>
+      <a href='{{ ref . "/protocol/slic.md" }}'>
+        <button class="button is-link is-small">SLIC</button>
+      </a>
+      <a href='{{ ref . "/protocol/assays.md" }}'>
+        <button class="button is-link is-small">Assays</button>
+      </a>
+      <a href='{{ ref . "/protocol/resources.md" }}'>
+        <button class="button is-link is-small">Resources</button>
+      </a>
+    </div>
+    <!-- end: nav below title -->
+
+    <article class="content mt-6">
+    {{ .Content }}
+  </article>
+  </div>
+</div>

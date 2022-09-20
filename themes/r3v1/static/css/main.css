@@ -1,0 +1,14 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+
+/* sticky sidebar */
+@media (min-width: 1280px) {
+  .sticky { top: auto; position: fixed; }
+}
+
+/* Content H5 */
+.content h5 { margin-top: 50px; }
+.content h5::after { 
+  content: ""; display: block; border-bottom: 1px solid #E0E0E0; margin-top: 7.5px; }
+
+/* Footnotes */
+.footnotes { font-size: 12.5px; }

@@ -1,0 +1,9 @@
+baseURL = "https://r3.aizan.science"
+languageCode = "en-us"
+title = "CDR³"
+theme = "r3v1"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

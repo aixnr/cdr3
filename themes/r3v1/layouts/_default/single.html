@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+{{ partial "header.html" . }}
+
+<div class="columns is-centered mt-6 mx-2">
+  <div class="column is-two-thirds">
+
+    <!-- start: title and subtitle -->
+    <h4 class="title is-4"> {{ .Title }} </h4>
+    <span class="has-text-grey is-size-7">
+      <a href="{{ "/" | absURL }}">
+        <button class="button is-link is-small mr-2">Main</button>
+      </a>
+    {{ if isset .Params "last" }}
+      Updated on {{ dateFormat "2 Jan 2006" .Params.Last }}
+    {{ end }}
+    </span>
+    <!-- end: title and subtitle -->
+
+    <div class="mt-6">
+      <div class="columns">
+        {{ if isset .Params "mab_properties" }}
+          {{ partial "mabinfo.html" . }}
+        {{ end }}  
+    
+        <article class="content column auto mb-6">
+          {{ .Content }}
+        </article>
+      </div>
+    </div>
+  </div>
+</div>
