@@ -1,5 +1,5 @@
 ---
-title: "Compiled Documentation on Resolved Reactive Repertoires (CDR³)"
+title: "Compiled Documentation on Resolved Reactive Repertoires (CDR3)"
 ---
 
 This page lists monoclonal antibodies of interest for reagent/assay development and for epitope mapping analysis.

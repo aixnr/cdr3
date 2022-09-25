@@ -1,6 +1,6 @@
 ---
 title: "Monoclonal Antibody Cloning with SLIC"
-last: "2022-09-15T09:30:00-04:00"
+last: "2022-09-24T09:30:00-04:00"
 ---
 
 *Sequence and ligation independent cloning* (SLIC) is one of homology-based cloning methods[^hom].
@@ -13,14 +13,24 @@ This page outlines steps to construct monoclonal antibody expression vectors (he
 
 ##### Publicly Available Antibody Sequence
 
-<!-- 
-- Typical size of the inserts, and associated cost
--->
+Sequences for monoclonal antibodies can be obtained from the following sources: (**I**) GenBank, (**II**) PDB, and (**III**) publications themselves.
+PDB would be the best place to start.
+PDB is primarily for crystal structure of monoclonal antibody bound to cognate antigen, but submissions include FASTA file with amino acid sequences for all of the polypeptide chains shown.
+Moreover, availability of crystal structure means that the epitope is well-resolved[^wellresolved].
+Importantly, monoclonal antibodies that are resolved often have high affinity binding to antigen, often in single or double-digit nanomolar range.
 
-Something here
+When accessing sequences, there are a few things to consider:
+
+1. The host of which the monoclonal antibody was isolated from. Often time, sequences deposited came from human and rarely from other animal hosts.
+2. The B cell subset which the BCR was cloned from. Monoclonal antibodies are often isolated from antibody-secreting cells (ASCs; CD27<sup>+</sup>CD38<sup>hi</sup>CD20<sup>--</sup>) and from memory B cells (CD27<sup>+</sup>IgD<sup>--</sup>).
+3. Immunizing antigen(s) and immune history. For example, viral infection typically generates a broad response, whereas some vaccination generate a limited response.
+4. IGHV mutational load, indicating the extent of somatic hypermutation and could be used to infer affinity against cognate antigen.
+
+Once the sequences are identified, the next step would be to synthesize VH and VL fragments to clone into expression vectors.
 
 ##### AbVec Features
 
+For cloning monoclonal antibody into mammalian expression vector, AbVec plasmids are one of the options.
 AbVec empty plasmids are available on Addgene.
 
 | AbVec       | Addgene #                  | REases               | Size (bp)
@@ -33,7 +43,7 @@ Note that AbVec plasmids listed here are for expressing human IgG1 antibody isot
 For other isotypes and hosts, consider using [InvivoGen pFUSE plasmid system](https://www.invivogen.com/pfuse).
 
 **AbVec2.0-IGHG1** includes heavy chain constant heavy (CH) region starting from amino acid sequence `STKGPSVFPLAP`[^heavych1].
-It does not include signal peptide, thus VH insert has to include suitable signal peptide sequence.
+It does not include signal peptide, thus VH insert has to include suitable signal peptide sequence[^signalpeptide].
 A double-digestion with **EcoRI-HF** & **SalI-HF** linearizes this heavy chain plasmid before VH insertion by SLIC.
 On a VH insert, include 5' upstream homology `aactgcacctcggttctatcgattgaattc` (before signal peptide) and 3' downstream homology `tcgaccaagggcccaagcgtcttccccctggcaccc`.
 
@@ -63,3 +73,7 @@ Something here
 [^gieselmann]: "Effective high-throughput isolation of fully human antibodies targeting infectious pathogens", [Lutz Gieselmann et al. 2021](https://doi.org/10.1038/s41596-021-00554-w) (*Nature Protocols*).
 
 [^heavych1]: Human IgG1 heavy chain constant region CH1 starts with `ASTK` amino acid sequence. The heavy chain empty does not include `A` amino acid. Most likely, a full plasmid with VH inserted leads to loss of **SalI** cut site. However, **ApaI** cut site can be used to linearize full plasmid (EcoRI/ApaI combination is CutSmart compatible) to replace VH insert with a new insert to generate a new construct.
+
+[^wellresolved]: At 2 -- 3 Å resolution, the precise molecular interaction between antibody and antigen is resolved.
+
+[^signalpeptide]: I have used signal peptides from *Gaussia* (G) luciferase. Others have used IL-2 signal peptide; some pFUSE plasmids include IL-2 as the signal peptide. Essentially, any *strong* signal peptide and verified with SignalP server would be fine for use.

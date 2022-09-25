@@ -1,10 +1,10 @@
 ---
-title: "About CDR³"
+title: "About CDR3"
 ---
 
-CDR³ was born out of my personal dissatisfaction with spreadsheet software for storing detailed information.
+CDR3 was born out of my personal dissatisfaction with spreadsheet software for storing detailed information.
 Spreadsheets excel[^excel] in storing structured information, but fall short with unstructured and granular details.
-*CDR³* here is a wordplay, referencing *complementarity-determining region* (CDR) on BCR/antibody, where the third region (CDR3) is the most crucial for mediating antigen recognition.
+*CDR3* here is a wordplay, referencing *complementarity-determining region* (CDR) on BCR/antibody, where the third region (CDR3) is the most crucial for mediating antigen recognition.
 
 Breaking down the name,
 

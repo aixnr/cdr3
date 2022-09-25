@@ -1,6 +1,6 @@
 baseURL = "https://r3.aizan.science"
 languageCode = "en-us"
-title = "CDR³"
+title = "CDR3"
 theme = "r3v1"
 
 [markup]

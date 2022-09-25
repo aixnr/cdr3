@@ -12,3 +12,6 @@
 
 /* Footnotes */
 .footnotes { font-size: 12.5px; }
+
+/* Center image within content class */
+.content p img { display: block; margin-left: auto; margin-right: auto; }
